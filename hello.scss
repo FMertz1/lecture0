@@ -1,0 +1,100 @@
+header {
+    font-family: Garamond, Cambria, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: black;
+    clear: both;
+    width: 100%;
+    margin-top: -10px;
+    margin-left: -10px;
+
+    h1 {
+        color: azure;
+    }
+}
+
+%allitems {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    text-align: center;
+}
+
+%centeritem {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navigation_bar {
+    @extend %allitems;
+
+    table, th {
+        @extend %centeritem;
+        border-collapse: collapse;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        padding: 4px;  
+    }
+
+    th:hover {
+        background-color: aquamarine;
+    }
+
+    @media (max-width: 490px) {
+        display: none;
+    }
+}
+
+.mobile_nav {
+    @media (min-width: 490px) {
+        display: none;
+    }
+    
+    overflow: hidden;
+    position: relative;
+    background-color: gray;
+    width: 105%;
+    margin-left: -10px;
+
+    #mylinks {
+        display: none;
+    }
+
+    a {
+        color: turquoise;
+        padding: 14px 16px;
+        font-size: 17px;
+        display: block;
+    }
+
+    a.icon {
+        background: teal;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    a:hover {
+        background-color: grey;
+        color: black;
+    }
+
+    .active {
+        background-color: teal;
+        color: white;
+    }
+}
+
+section {
+    @extend %allitems;
+    img, p {
+        @extend %centeritem;
+    }
+    img {
+        height: 30%;
+        width: 30%;
+    }
+}
+

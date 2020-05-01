@@ -3,25 +3,45 @@
     <head>
         <title>Fred Mertz</title>
         <link rel="stylesheet" href="hello.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="hello.js"></script>
     </head>
     <body>
-        <div id="top">
+        <header>
             <h1>Fred Mertz</h1>
-        </div>
-        <div id = "bottom">
-            <img src="img/image1.JPG" height="200" width="300" class="center">
+        </header>
+        <nav class="navigation_bar">
             <table>
                 <tr>
-                    <th><span class="name">Test</span></th>
-                </tr>
-                <tr>
-                    <td>3</td>
+                    <th><a href="#home">Home</a></th>
+                    <th><a href="#aboutMe">About Me</a></th>
+                    <th><a href="#pictureMe">Picture of Me</a></th>
+                    <th><a href="#otherPic">Other Picture</a></th>
                 </tr>
             </table>
-            <form>
-                <input type="text" placeholder="Full Name" name="name">
-                <button>Submit!</button>
-            </form>
-        </div>
+        </nav>
+
+        <nav class="mobile_nav">
+            <a href="#home" class="active">Logo</a>
+            <div id="myLinks" style="display: none;">
+                <a href="#aboutme">About Me</a>
+                <a href="#pcitureMe">Picture of Me</a>
+                <a href="#otherPic">Other Picture</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+        
+        <section class="OtherImage">
+            <img src="img/image1.JPG" height="100">
+        </section>
+        <section class="AboutMe">
+            <p>Hi, my name is Frederick and I'm a UW student who secretly hates his life.</p>
+        </section>
+        <section class="ImageMe">
+            <img src="img/FredHeadshot.jpg" height="100">
+        </section>
     </body>
 </html>

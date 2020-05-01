@@ -1,26 +1,85 @@
-body {
-    background-color: whitesmoke;
+header {
+  font-family: Garamond, Cambria, sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: black;
+  clear: both;
+  width: 100%;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+header h1 {
+  color: azure;
 }
 
-h1 {
-    color: azure;
+section, .navigation_bar {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  text-align: center;
 }
 
-#top {
-    font-family: Garamond, Cambria, sans-serif;
-    font-size: 22px;
-    font-weight: bold;
-    padding: 10px;
-    background-color: black;
-    clear: both;
-    width: 100%;
-    margin-top: -10px;
-    margin-left: -10px;
+section img, section p, .navigation_bar table, .navigation_bar th {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
+.navigation_bar table, .navigation_bar th {
+  border-collapse: collapse;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  padding: 4px;
 }
+.navigation_bar th:hover {
+  background-color: aquamarine;
+}
+@media (max-width: 490px) {
+  .navigation_bar {
+    display: none;
+  }
+}
+
+.mobile_nav {
+  overflow: hidden;
+  position: relative;
+  background-color: gray;
+  width: 105%;
+  margin-left: -10px;
+}
+@media (min-width: 490px) {
+  .mobile_nav {
+    display: none;
+  }
+}
+.mobile_nav #mylinks {
+  display: none;
+}
+.mobile_nav a {
+  color: turquoise;
+  padding: 14px 16px;
+  font-size: 17px;
+  display: block;
+}
+.mobile_nav a.icon {
+  background: teal;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.mobile_nav a:hover {
+  background-color: grey;
+  color: black;
+}
+.mobile_nav .active {
+  background-color: teal;
+  color: white;
+}
+
+section img {
+  height: 30%;
+  width: 30%;
+}
+
+/*# sourceMappingURL=hello.css.map */
